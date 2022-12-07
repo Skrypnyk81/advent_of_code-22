@@ -39,7 +39,10 @@ func main() {
 	}
 
 	fmt.Println(total)
-	readFile.Close()
+	err = readFile.Close()
+	if err != nil {
+		fmt.Println("Errore nella chiusura del file", err)
+	}
 }
 
 // A, X = Rock
