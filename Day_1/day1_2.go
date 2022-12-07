@@ -40,5 +40,8 @@ func main() {
 		result += v
 	}
 	fmt.Println(result)
-	readFile.Close()
+	err = readFile.Close()
+	if err != nil {
+		fmt.Println("Errore nella chiusura del file", err)
+	}
 }
